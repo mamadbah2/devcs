@@ -1,0 +1,28 @@
+@model IEnumerable<Absence>
+
+<h2>Liste des absences</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Aucune absence trouvée pour cet étudiant.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Cours</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var absence in Model)
+        {
+            <tr>
+                <td>@absence.Date.ToString("dd/MM/yyyy")</td>
+                <td>@absence.Cours.Id</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
