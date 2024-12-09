@@ -1,4 +1,5 @@
 using devcs.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace devcs.Controllers;
 
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 [ApiController]
 [Route("api/[controller]")]
-public class EtudiantsController : ControllerBase
+public class EtudiantsController : IEtudiantsController
 {
     private readonly EtudiantService _etudiantService;
 

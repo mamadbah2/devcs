@@ -1,5 +1,6 @@
 using devcs.Data;
 using devcs.Models;
+using devcs.Services.Interf;
 
 namespace devcs.Services;
 
@@ -7,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-public class EtudiantService
+public class EtudiantService : IEtudiantService
 {
     private readonly ApplicationDbContext _context;
 
